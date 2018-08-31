@@ -4,9 +4,9 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mysqlUserDao" class="com.koalain.spring02.dao.implement.MysqlUserDao"></bean>
-    <bean id="oracleUserDao" class="com.koalain.spring02.dao.implement.OracleUserDao"></bean>
+    <bean id="mysqlUserDao" class="com.koalain.spring02.dao.implement.MysqlUserDao"/>
+    <bean id="oracleUserDao" class="com.koalain.spring02.dao.implement.OracleUserDao"/>
     <bean id="userService" class="com.koalain.spring02.service.implement.UserServiceImplement">
-        <property name="userDao" ref="oracleUserDao"></property>
+        <property name="userDao" ref="oracleUserDao"/>
     </bean>
 </beans>
