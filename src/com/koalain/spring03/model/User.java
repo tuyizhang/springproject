@@ -5,17 +5,23 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+    private int age;
+    public void setAge(int age){
+        this.age=age;
+    }
 
 
-    public void showName() {
-      System.out.println("name:" + name);
+    public void show() {
+      System.out.println("name:" + name + ",age=" + age);
     }
 
     public User(){
-
+        name="testUser";
+        age=20;
     }
 
-    public User(String name) {
+    public User(String name,int age) {
         this.name = name;
+        this.age = age;
     }
 }

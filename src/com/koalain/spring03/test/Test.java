@@ -1,5 +1,6 @@
 package com.koalain.spring03.test;
 
+import com.koalain.spring03.model.Company;
 import com.koalain.spring03.model.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,21 +10,22 @@ public class Test {
         ApplicationContext context= new ClassPathXmlApplicationContext("com/koalain/spring03/resource/beans.xml");
         //get bean from factory
         User user = (User)(context.getBean("user"));
-        user.showName();
+        user.show();
         User userWithPars = (User)(context.getBean("userWithPars"));
-        userWithPars.showName();
+        userWithPars.show();
 
         User userWithPars2 = (User)(context.getBean("userWithPars2"));
-        userWithPars2.showName();
-
-        User userWithPars3 = (User)(context.getBean("userWithPars3"));
-        userWithPars3.showName();
+        userWithPars2.show();
 
         User userWithFactory = (User)(context.getBean("userWithFactory"));
-        userWithFactory.showName();
+        userWithFactory.show();
 
         User userWithFactoryDynamic = (User)(context.getBean("userWithDynamicFactory"));
-        userWithFactoryDynamic.showName();
+        userWithFactoryDynamic.show();
+
+
+        Company company = (Company) (context.getBean("company"));
+        company.show();
 
     }
 

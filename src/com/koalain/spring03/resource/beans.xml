@@ -6,28 +6,39 @@
 
     <bean id="user" class="com.koalain.spring03.model.User">
         <property name="name" value="张三"/>
+        <property name="age" value="18"/>
     </bean>
 
     <bean id="userWithPars" class="com.koalain.spring03.model.User">
         <constructor-arg index="0" value="李四"/>
+        <constructor-arg index="1" value="21"/>
     </bean>
 
     <bean id="userWithPars2" class="com.koalain.spring03.model.User">
-        <constructor-arg index="0" value="李四2"/>
-    </bean>
-
-
-    <bean id="userWithPars3" class="com.koalain.spring03.model.User">
         <constructor-arg type="java.lang.String" value="李四3"/>
+        <constructor-arg type="int" value="25"/>
     </bean>
 
     <bean id="userWithFactory" class="com.koalain.spring03.model.UserFactory" factory-method="newInstance">
-        <constructor-arg index="0" value="静态工厂用户 "/>
+        <constructor-arg index="0" value="静态工厂用户"/>
+        <constructor-arg index="1" value="28"/>
     </bean>
 
     <bean id="userDynamicFactory" class="com.koalain.spring03.model.UserDynamicFactory"/>
     <bean id="userWithDynamicFactory" factory-bean="userDynamicFactory" factory-method="newInstance">
-        <constructor-arg index="0" value="动态工厂用户 "/>
+        <constructor-arg index="0" value="动态工厂用户"/>
+        <constructor-arg index="1" value="29"/>
+    </bean>
+
+
+    <!--bean依赖注入-->
+    <bean id="address" class="com.koalain.spring03.model.Address">
+        <constructor-arg index="0" value="北京市"/>
+        <constructor-arg index="1" value="朝阳区国贸一期A座2001"/>
+    </bean>
+    <bean id="company" class="com.koalain.spring03.model.Company">
+        <property name="name" value="远东软件公司"/>
+        <property name="address" ref="address"/>
     </bean>
 
 </beans>
