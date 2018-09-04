@@ -41,4 +41,17 @@
         <property name="address" ref="address"/>
     </bean>
 
+    <!--数组依赖注入-->
+    <bean id="student" class="com.koalain.spring03.model.Student">
+        <property name="name" value="张大海"/>
+        <property name="favorites">
+            <array>
+                <value>足球</value>
+                <value>计算机</value>
+                <value>音乐</value>
+            </array>
+        </property>
+    </bean>
+
+
 </beans>

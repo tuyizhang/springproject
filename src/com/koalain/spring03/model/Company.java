@@ -17,6 +17,7 @@ public class Company {
     public Company(){}
 
     public void show() {
+        System.out.println("----");
         System.out.println("name:" + name );
         System.out.println("address=" + address);
     }
