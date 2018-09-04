@@ -44,7 +44,7 @@
     <!--数组依赖注入-->
     <bean id="student" class="com.koalain.spring03.model.Student">
         <property name="name" value="张大海"/>
-        <property name="favorites">
+        <property name="hobies">
             <array>
                 <value>足球</value>
                 <value>计算机</value>
@@ -53,5 +53,15 @@
         </property>
     </bean>
 
+    <bean id="studentfromlist" class="com.koalain.spring03.model.Student">
+        <property name="name" value="吉诺比利"/>
+        <property name="friends">
+            <list>
+                <value>邓肯</value>
+                <value>帕克</value>
+                <value>波波维奇</value>
+            </list>
+        </property>
+    </bean>
 
 </beans>

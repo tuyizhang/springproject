@@ -31,6 +31,9 @@ public class Test {
 
         Student student = (Student)(context.getBean("student"));
         student.show();
+
+        Student studentfromlist = (Student)(context.getBean("studentfromlist"));
+        studentfromlist.show();
     }
 
 }
