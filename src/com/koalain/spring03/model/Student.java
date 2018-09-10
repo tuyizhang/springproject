@@ -32,9 +32,9 @@ public class Student {
     public void show() {
         System.out.println("----");
         System.out.println("name:" + name );
-        if(hobies.length>0)
+        if(hobies!=null && hobies.length>0)
             System.out.println("hobies:"+ Arrays.toString(hobies));
-        if(friends.size()>0)
+        if(friends!=null && friends.size()>0)
             System.out.println("friends:"+ friends.toString());
 
     }
