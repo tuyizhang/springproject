@@ -1,5 +1,6 @@
 package com.koalain.spring03.test;
 
+import com.koalain.spring03.model.Address;
 import com.koalain.spring03.model.Company;
 import com.koalain.spring03.model.Student;
 import com.koalain.spring03.model.User;
@@ -34,6 +35,7 @@ public class Test {
 
         Student studentfromlist = (Student)(context.getBean("studentfromlist"));
         studentfromlist.show();
+
     }
 
 }
